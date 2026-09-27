@@ -103,7 +103,7 @@ class NavBar extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'FAUZAN.DEV',
+                        'Guest',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w800,
@@ -149,31 +149,6 @@ class NavBar extends StatelessWidget {
                 ),
                 const SizedBox(width: 14),
               ],
-
-              // Badge Pengguna Aktif (Hasil Login)
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: currentUser.getRoleColor().withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: currentUser.getRoleColor().withValues(alpha: 0.4)),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(currentUser.getRoleIcon(), size: 14, color: currentUser.getRoleColor()),
-                    const SizedBox(width: 6),
-                    Text(
-                      currentUser.getRoleTitle(),
-                      style: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.w700,
-                        color: currentUser.getRoleColor(),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
 
               const SizedBox(width: 12),
 

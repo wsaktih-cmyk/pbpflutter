@@ -24,7 +24,7 @@ class CircularProfileAvatar extends StatefulWidget {
     super.key,
     this.radius = 80,
     this.imageUrl =
-        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+        'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
     this.isInteractive = true,
     this.onTap,
     this.showOrbitBadges,
@@ -308,21 +308,43 @@ class _CircularProfileAvatarState extends State<CircularProfileAvatar>
     );
   }
 
-  /// Lapisan 5: Avatar Gambar 3D dengan Fallback Aman
+  /// Lapisan 5: Avatar Gambar 3D dengan Dukungan Asset Lokal & Fallback Aman
   Widget _buildAvatarCore(double totalSize) {
+    final isAsset = widget.imageUrl.startsWith('assets/');
+
     return ClipOval(
       child: SizedBox(
         width: totalSize,
         height: totalSize,
-        child: widget.use3DAvatarAsset
+        child: isAsset
             ? Image.asset(
-                'assets/images/avatar_3d.jpg',
+                widget.imageUrl,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
-                  return _buildNetworkImage(totalSize);
+                  return Image.asset(
+                    'assets/images/avatar_3d.jpg',
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return _buildNetworkImage(totalSize);
+                    },
+                  );
                 },
               )
-            : _buildNetworkImage(totalSize),
+            : (widget.use3DAvatarAsset
+                ? Image.asset(
+                    'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Image.asset(
+                        'assets/images/avatar_3d.jpg',
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return _buildNetworkImage(totalSize);
+                        },
+                      );
+                    },
+                  )
+                : _buildNetworkImage(totalSize)),
       ),
     );
   }

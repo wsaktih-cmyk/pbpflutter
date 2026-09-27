@@ -538,9 +538,13 @@ class _Profile3DInspectorDialogState extends State<Profile3DInspectorDialog>
     switch (_currentSkin) {
       case '3d_dev':
         return Image.asset(
-          'assets/images/avatar_3d.jpg',
+          'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
           fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
+          errorBuilder: (context, error, stackTrace) => Image.asset(
+            'assets/images/avatar_3d.jpg',
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
+          ),
         );
 
       case 'hologram':
@@ -552,16 +556,20 @@ class _Profile3DInspectorDialogState extends State<Profile3DInspectorDialog>
             0.0, 0.0, 0.0, 1.0, 0.0,
           ]),
           child: Image.asset(
-            'assets/images/avatar_3d.jpg',
+            'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
             fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
+            errorBuilder: (context, error, stackTrace) => Image.asset(
+              'assets/images/avatar_3d.jpg',
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
+            ),
           ),
         );
 
       case 'classic':
       default:
-        return Image.network(
-          'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+        return Image.asset(
+          'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
         );

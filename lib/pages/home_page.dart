@@ -161,7 +161,7 @@ class _HomePageState extends State<HomePage> {
             const CircularProfileAvatar(
               radius: 104,
               imageUrl:
-                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+                  'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
               showOrbitBadges: true,
               use3DAvatarAsset: true,
               enable3DTilt: true,
@@ -205,11 +205,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Badge Status Sesi & Hak Akses
-              _buildSessionClearanceBadge(),
-
-              const SizedBox(height: 16),
-
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
@@ -224,7 +219,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   TypewriterText(
                     texts: const [
-                      'Ahmad Fauzan 👋',
+                      'Wishang 👋',
                       'Flutter Developer 🚀',
                       'Software Architect 💻',
                     ],
@@ -242,7 +237,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 6),
 
               const Text(
-                'Software Engineer • PBO & Flutter Mobile Architect',
+                'Software Engineer',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -296,7 +291,7 @@ class _HomePageState extends State<HomePage> {
             const CircularProfileAvatar(
               radius: 80,
               imageUrl:
-                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+                  'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
               showOrbitBadges: true,
               use3DAvatarAsset: true,
               enable3DTilt: true,
@@ -319,8 +314,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         const SizedBox(height: 24),
-        _buildSessionClearanceBadge(),
-        const SizedBox(height: 14),
         Wrap(
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -335,7 +328,7 @@ class _HomePageState extends State<HomePage> {
             ),
             TypewriterText(
               texts: const [
-                'Ahmad Fauzan 👋',
+                'Wishang 👋',
                 'Flutter Dev 🚀',
                 'Software Architect 💻',
               ],
@@ -379,35 +372,6 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(height: 22),
         _buildHeroActionButtons(isMobile: true),
       ],
-    );
-  }
-
-  Widget _buildSessionClearanceBadge() {
-    return FittedBox(
-      fit: BoxFit.scaleDown,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-        decoration: BoxDecoration(
-          color: widget.currentUser.getRoleColor().withOpacity(0.15),
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: widget.currentUser.getRoleColor().withOpacity(0.4)),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(widget.currentUser.getRoleIcon(), size: 15, color: widget.currentUser.getRoleColor()),
-            const SizedBox(width: 8),
-            Text(
-              'Sesi: ${widget.currentUser.displayName} (${widget.currentUser.getRoleTitle()})',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: widget.currentUser.getRoleColor(),
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 
