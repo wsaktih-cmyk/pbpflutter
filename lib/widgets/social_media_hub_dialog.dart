@@ -22,7 +22,7 @@ class SocialProfile {
 }
 
 /// Dialog Terpadu Hub Sosial Media & Tautan Profil
-/// Menyatukan seluruh profil sosial media (GitHub, LinkedIn, Instagram, Email) dalam satu jendela interaktif.
+/// Menyatukan seluruh profil sosial media (GitHub, LinkedIn, Instagram, TikTok) dalam satu jendela interaktif.
 class SocialMediaHubDialog extends StatelessWidget {
   const SocialMediaHubDialog({super.key});
 
@@ -37,35 +37,27 @@ class SocialMediaHubDialog extends StatelessWidget {
   static const List<SocialProfile> _profiles = [
     SocialProfile(
       platform: 'GitHub',
-      handle: '@ahmadfauzan-dev',
-      url: 'https://github.com/ahmadfauzan-dev',
+      handle: '@wsaktih-cmyk',
+      url: 'https://github.com/wsaktih-cmyk',
       icon: Icons.code_rounded,
       brandColor: Colors.white,
-      description: 'Repositori kode sumber tugas PBO, arsitektur OOP Dart, dan proyek Flutter mobile.',
-    ),
-    SocialProfile(
-      platform: 'LinkedIn',
-      handle: 'in/ahmad-fauzan',
-      url: 'https://linkedin.com/in/ahmad-fauzan',
-      icon: Icons.work_rounded,
-      brandColor: Color(0xFF0A66C2),
-      description: 'Profil profesional, riwayat akademik informatika, sertifikasi, dan koneksi industri.',
+      description: 'Repositori tugas dan proyek lainnya.',
     ),
     SocialProfile(
       platform: 'Instagram',
-      handle: '@fauzan.dev',
-      url: 'https://instagram.com/fauzan.dev',
+      handle: '@wishangskt',
+      url: 'https://instagram.com/wishangskt',
       icon: Icons.camera_alt_rounded,
       brandColor: Color(0xFFE1306C),
-      description: 'Aktivitas kampus, dokumentasi proses belajar programming, dan UI/UX design showcase.',
+      description: 'Sosial media pribadi.',
     ),
     SocialProfile(
-      platform: 'Email Resmi',
-      handle: 'fauzan.dev@student.ac.id',
-      url: 'mailto:fauzan.dev@student.ac.id',
-      icon: Icons.alternate_email_rounded,
-      brandColor: AppColors.secondary,
-      description: 'Kontak surat elektronik resmi untuk keperluan akademik, magang, dan kolaborasi.',
+      platform: 'TikTok',
+      handle: '@wshngskt',
+      url: 'https://tiktok.com/@wshngskt_',
+      icon: Icons.music_note_rounded,
+      brandColor: Color(0xFFEE1D52),
+      description: 'Sosial media pribadi.',
     ),
   ];
 
@@ -80,7 +72,7 @@ class SocialMediaHubDialog extends StatelessWidget {
             const SizedBox(width: 10),
             Expanded(
               child: Text(
-                'Tautan ${profile.platform} (${profile.handle}) berhasil disalin!',
+                'Tautan berhasil disalin!',
                 style: const TextStyle(fontWeight: FontWeight.w600),
               ),
             ),
@@ -151,7 +143,7 @@ class SocialMediaHubDialog extends StatelessWidget {
                             ),
                             SizedBox(height: 2),
                             Text(
-                              'Terhubung dengan Ahmad Fauzan',
+                              'Terhubung dengan Wishang',
                               style: TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.w800,

@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
             const CircularProfileAvatar(
               radius: 36,
               imageUrl:
-                  'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+                  'assets/images/profile.jpeg',
             ),
             const SizedBox(width: 18),
             Flexible(

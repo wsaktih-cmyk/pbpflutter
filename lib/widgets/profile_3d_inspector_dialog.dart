@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../models/student_model.dart';
+import '../models/mahasiswa_model.dart';
 import '../services/auth_service.dart';
 import '../theme/app_colors.dart';
 
@@ -538,7 +538,7 @@ class _Profile3DInspectorDialogState extends State<Profile3DInspectorDialog>
     switch (_currentSkin) {
       case '3d_dev':
         return Image.asset(
-          'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+          'assets/images/profile.jpeg',
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) => Image.asset(
             'assets/images/avatar_3d.jpg',
@@ -556,7 +556,7 @@ class _Profile3DInspectorDialogState extends State<Profile3DInspectorDialog>
             0.0, 0.0, 0.0, 1.0, 0.0,
           ]),
           child: Image.asset(
-            'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+            'assets/images/profile.jpeg',
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) => Image.asset(
               'assets/images/avatar_3d.jpg',
@@ -569,7 +569,7 @@ class _Profile3DInspectorDialogState extends State<Profile3DInspectorDialog>
       case 'classic':
       default:
         return Image.asset(
-          'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+          'assets/images/profile.jpeg',
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) => _buildFallbackImage(),
         );

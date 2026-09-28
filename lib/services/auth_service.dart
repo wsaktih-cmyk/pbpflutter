@@ -48,7 +48,7 @@ class AuthService extends ChangeNotifier {
         username: 'ahmad_fauzan',
         displayName: 'Ahmad Fauzan (Author & Mahasiswa)',
         nim: '2024091001',
-        avatarUrl: 'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+        avatarUrl: 'assets/images/profile.jpeg',
         programStudi: 'Teknik Informatika (Software Engineering)',
         ipk: 3.92,
       );
@@ -82,7 +82,7 @@ class AuthService extends ChangeNotifier {
       username: nim,
       displayName: 'Ahmad Fauzan ($nim)',
       nim: nim,
-      avatarUrl: 'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+      avatarUrl: 'assets/images/profile.jpeg',
       programStudi: 'Teknik Informatika (Software Engineering)',
       ipk: 3.92,
     );

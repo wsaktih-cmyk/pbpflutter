@@ -4,7 +4,7 @@ import '../models/user_model.dart';
 import '../services/auth_service.dart';
 import '../theme/app_colors.dart';
 import '../pages/login_page.dart';
-import '../pages/pbo_lab_page.dart';
+import '../pages/mahasiswa_page.dart';
 import 'profile_3d_inspector_dialog.dart';
 
 class NavBar extends StatelessWidget {
@@ -138,13 +138,13 @@ class NavBar extends StatelessWidget {
                   onTap: () => Profile3DInspectorDialog.show(context),
                 ),
                 _buildActionLink(
-                  icon: Icons.terminal_rounded,
-                  label: 'Lab PBO (ListBuilder)',
+                  icon: Icons.school_rounded,
+                  label: 'Katalog Mahasiswa',
                   color: const Color(0xFF00A3FF),
                   isHighlighted: true,
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PboLabPage(currentUser: currentUser)),
+                    MaterialPageRoute(builder: (context) => MahasiswaPage(currentUser: currentUser)),
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -152,15 +152,15 @@ class NavBar extends StatelessWidget {
 
               const SizedBox(width: 12),
 
-              // Tombol Aksi Mobile (Profil 3D & Lab PBO)
+              // Tombol Aksi Mobile (Profil 3D & Katalog Mahasiswa)
               if (!isDesktop) ...[
                 IconButton(
                   onPressed: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PboLabPage(currentUser: currentUser)),
+                    MaterialPageRoute(builder: (context) => MahasiswaPage(currentUser: currentUser)),
                   ),
-                  icon: const Icon(Icons.terminal_rounded, color: Color(0xFF00A3FF), size: 20),
-                  tooltip: 'Laboratorium PBO (ListBuilder & Setter/Getter)',
+                  icon: const Icon(Icons.school_rounded, color: Color(0xFF00A3FF), size: 20),
+                  tooltip: 'Katalog Mahasiswa',
                 ),
                 IconButton(
                   onPressed: () => Profile3DInspectorDialog.show(context),

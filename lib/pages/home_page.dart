@@ -11,7 +11,7 @@ import '../widgets/certificate_showcase.dart';
 import '../widgets/typewriter_text.dart';
 import '../widgets/social_media_hub_dialog.dart';
 import '../widgets/glb_3d_character_viewer.dart';
-import 'pbo_lab_page.dart';
+import 'mahasiswa_page.dart';
 
 /// Halaman Home (Portofolio Digital & Laboratorium PBO)
 /// Memadukan konsep estetika minimalis elegan, foto lingkaran berputar,
@@ -161,7 +161,7 @@ class _HomePageState extends State<HomePage> {
             const CircularProfileAvatar(
               radius: 104,
               imageUrl:
-                  'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+                  'assets/images/profile.jpeg',
               showOrbitBadges: true,
               use3DAvatarAsset: true,
               enable3DTilt: true,
@@ -291,7 +291,7 @@ class _HomePageState extends State<HomePage> {
             const CircularProfileAvatar(
               radius: 80,
               imageUrl:
-                  'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+                  'assets/images/profile.jpeg',
               showOrbitBadges: true,
               use3DAvatarAsset: true,
               enable3DTilt: true,
@@ -432,16 +432,16 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
-        // 3. Laboratorium PBO (ListBuilder, Functions & Setter/Getter)
+        // 3. Katalog Mahasiswa (ListView.builder, Functions & Setter/Getter)
         ElevatedButton.icon(
           onPressed: () => Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PboLabPage(currentUser: widget.currentUser),
+              builder: (context) => MahasiswaPage(currentUser: widget.currentUser),
             ),
           ),
-          icon: Icon(Icons.terminal_rounded, size: isMobile ? 16 : 18, color: const Color(0xFF00A3FF)),
-          label: const Text('Lab PBO (ListBuilder)'),
+          icon: Icon(Icons.school_rounded, size: isMobile ? 16 : 18, color: const Color(0xFF00A3FF)),
+          label: const Text('Katalog Mahasiswa'),
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF0F172A),
             foregroundColor: Colors.white,

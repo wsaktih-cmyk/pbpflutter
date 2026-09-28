@@ -24,7 +24,7 @@ class CircularProfileAvatar extends StatefulWidget {
     super.key,
     this.radius = 80,
     this.imageUrl =
-        'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+        'assets/images/profile.jpeg',
     this.isInteractive = true,
     this.onTap,
     this.showOrbitBadges,
@@ -332,7 +332,7 @@ class _CircularProfileAvatarState extends State<CircularProfileAvatar>
               )
             : (widget.use3DAvatarAsset
                 ? Image.asset(
-                    'assets/images/WhatsApp Image 2026-09-28 at 05.43.25.jpeg',
+                    'assets/images/profile.jpeg',
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) {
                       return Image.asset(
